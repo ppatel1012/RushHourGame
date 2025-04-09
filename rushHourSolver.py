@@ -23,18 +23,13 @@ class Vehicle:
         """ Returns a new Vehicle object with updated position 
             given a direction (LRUD) """
         if direction == 'L':
-         #   print("in llllllllthis fr")
             return Vehicle(self.id, self.x - 1, self.y, self.direction)
         elif direction == 'R':
-          #  print("in this rrrrrrrrrrrrrrrfr")
             return Vehicle(self.id, self.x + 1, self.y, self.direction)
         elif direction == 'U':
-          #  print("in this uuuuuuuuuufr")
             return Vehicle(self.id, self.x, self.y - 1, self.direction)
         elif direction == 'D':
-          #  print("in this ddddddddfr")
             return Vehicle(self.id, self.x, self.y + 1, self.direction)
-      #  print("in this fr")
         return self  # No change
 
   #priotize cars that are directly touching the red car
@@ -80,7 +75,7 @@ def applyMove(vehicles, move):
     
     for v in vehicles:
         if v.id == vid:
-          #  print("wnet in here")
+          #  print("went in here") debugging
             new_vehicles.append(v.move(direction))
             
         else:
